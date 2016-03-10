@@ -80,7 +80,8 @@ angular.module('app', [
         directive: 'wt-scope-watch',
         attrs: {
           value: 'randomValue'
-        }
+        },
+        class:"blue-grey darken-1 white-text"
       },
       {
         name: 'time',
@@ -90,7 +91,8 @@ angular.module('app', [
         name: 'datamodel',
         directive: 'wt-scope-watch',
         dataAttrName: 'value',
-        dataModelType: RandomDataModel
+        dataModelType: RandomDataModel,
+        class : "red darken-1 white-text"
       },
       {
         name: 'resizable',
@@ -127,7 +129,7 @@ angular.module('app', [
     }
   ])
   .controller('DemoCtrl', function ($scope, $interval, $window, widgetDefinitions, defaultWidgets) {
-    
+
     $scope.dashboardOptions = {
       widgetButtons: true,
       widgetDefinitions: widgetDefinitions,

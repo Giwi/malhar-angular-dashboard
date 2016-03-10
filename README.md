@@ -84,7 +84,7 @@ Running demo.
 
  ``` bash
     $ bower install
-    $ gulp build:demo
+    $ guild:demo
     $ gulp serve
  ```
 

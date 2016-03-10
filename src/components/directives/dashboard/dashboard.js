@@ -15,11 +15,11 @@
  */
 'use strict';
 
-angular.module('ui.dashboard', ['ui.bootstrap', 'ui.sortable']);
+angular.module('ui.dashboard', ['ui.sortable']);
 
 angular.module('ui.dashboard')
 
-  .directive('dashboard', ['WidgetModel', 'WidgetDefCollection', '$uibModal', 'DashboardState', '$log', function (WidgetModel, WidgetDefCollection, $uibModal, DashboardState, $log) {
+  .directive('dashboard', ['WidgetModel', 'WidgetDefCollection', 'DashboardState', '$log', function (WidgetModel, WidgetDefCollection, DashboardState, $log) {
 
     return {
       restrict: 'A',
@@ -139,7 +139,7 @@ angular.module('ui.dashboard')
          */
         scope.openWidgetSettings = function (widget) {
 
-          // Set up $uibModal options 
+          // Set up $uibModal options
           var options = _.defaults(
             { scope: scope },
             widget.settingsModalOptions,
@@ -151,7 +151,7 @@ angular.module('ui.dashboard')
               return widget;
             }
           };
-          
+
           // Create the modal
           var modalInstance = $uibModal.open(options);
           var onClose = widget.onSettingsClose || scope.options.onSettingsClose;
@@ -168,7 +168,7 @@ angular.module('ui.dashboard')
               scope.$emit('widgetChanged', widget);
             },
             function (reason) {
-              
+
               // Call the dismiss callback
               onDismiss(reason, scope);
 

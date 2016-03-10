@@ -17,8 +17,8 @@
 'use strict';
 
 angular.module('ui.dashboard')
-  .directive('dashboardLayouts', ['LayoutStorage', '$timeout', '$uibModal',
-    function(LayoutStorage, $timeout, $uibModal) {
+  .directive('dashboardLayouts', ['LayoutStorage', '$timeout',
+    function(LayoutStorage, $timeout) {
       return {
         scope: true,
         templateUrl: function(element, attr) {
