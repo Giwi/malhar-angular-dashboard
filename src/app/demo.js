@@ -124,7 +124,8 @@ angular.module('app', [
     {
       name: 'time',
       style: {
-        width: '50%'
+        width: '50%',
+        height: '800px'
       }
     }
   ])
@@ -143,4 +144,3 @@ angular.module('app', [
     }, 500);
 
   });
-

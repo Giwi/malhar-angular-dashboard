@@ -18,7 +18,7 @@
       <span ng-if="options.widgetButtons">
         <button ng-repeat="widget in widgetDefs"
                 ng-click="addWidgetInternal($event, widget);" type="button" class="waves-effect waves-light btn">
-          sdfs{{widget.name}}
+          {{widget.name}}
         </button>
       </span>
       <button class="waves-effect waves-light btn" ng-click="resetWidgetsToDefault()"><i
